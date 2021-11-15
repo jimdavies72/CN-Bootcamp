@@ -1,6 +1,6 @@
 const gridArray = ["___|___|___", "___|___|___", "   |   |"];
 
-for (i=0; i < gridArray.length; i++){
+for (let i=0; i < gridArray.length; i++){
   console.log (gridArray[i])
 }
 
@@ -10,7 +10,7 @@ const myArray = [
   "Banana"
 ]
 
-for (i=0; i < myArray.length; i++){
+for (let i=0; i < myArray.length; i++){
   console.log(`Fruit: ${myArray[i]}`)
 }
 
