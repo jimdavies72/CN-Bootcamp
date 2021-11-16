@@ -1,24 +1,17 @@
+const xoArray = ["   x", "   O   ", "     ", "x", "x", "O", "o", "", ""];
 
-
-const xoArray = [
-  "   x", "   O   ", "     ",
-  "x", "x", "O",
-  "o", "", ""];
-
-  
-  /* format the input data to single character and lower case */
-  for (let i = 0; i < xoArray.length; i++){
-
-    if (xoArray[i].indexOf("x") >= 0 || xoArray[i].indexOf("X") >= 0) {
-      xoArray[i] = "x";
-    } else if (xoArray[i].indexOf("o") >= 0 || xoArray[i].indexOf("O") >= 0) {
-      xoArray[i] = "o";
-    } else {
-      xoArray[i] = " ";
-    }
+/* format the input data to single character and lower case */
+for (let i = 0; i < xoArray.length; i++) {
+  if (xoArray[i].indexOf("x") >= 0 || xoArray[i].indexOf("X") >= 0) {
+    xoArray[i] = "x";
+  } else if (xoArray[i].indexOf("o") >= 0 || xoArray[i].indexOf("O") >= 0) {
+    xoArray[i] = "o";
+  } else {
+    xoArray[i] = " ";
   }
+}
 
-//set the grid 
+//set the grid
 const gridArray = [
   ` ${xoArray[0]} | ${xoArray[1]} | ${xoArray[2]} `,
   `___|___|___`,
@@ -29,6 +22,8 @@ const gridArray = [
 ];
 
 //draw the grid
-for (let i = 0; i < gridArray.length; i++){
+for (let i = 0; i < gridArray.length; i++) {
   console.log(gridArray[i]);
 }
+
+
