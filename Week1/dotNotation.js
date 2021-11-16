@@ -45,11 +45,19 @@ for (let i = 0; i < helloWorldArray.length; i++) {
 const splitArray = helloWorld.split("-")
 console.log(splitArray);
 
+
+const address = {
+  town: "Halewood",
+  city: "Liverpool",
+  postCode: "L25"
+}
+
 const myInformationArray = [
   "James",
   21,
   false,
-  ["Cake", "Pizza", "Tea"]
+  ["Cake", "Pizza", "Tea"],
+  address
 ]
 
 console.log(myInformationArray);
