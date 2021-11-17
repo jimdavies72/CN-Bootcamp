@@ -136,18 +136,20 @@ for (let i = 9; i >= 0; i--){
 */
 
 //Activity 4
-/*
+
 let newFilms = films.splice(0, 4)
 for(let i = 0; i < newFilms.length; i++){
   //console.log(newFilms[i])
+  let response = ""
   if (i === 2 && newFilms[i] === "Ghostbusters"){
     console.log(`Film ${i + 1}: ${newFilms[i]} - Yeay!!!`);
+  }else if (i === 2 && newFilms[i] !== "Ghostbusters") {
+    console.log(`Film ${i + 1}: ${newFilms[i]} - Boo!!!`)
   }else {
     console.log(`Film ${i + 1}: ${newFilms[i]}`);
-    
   }
 }
-*/
+
 
 //Activity 5
 /*
