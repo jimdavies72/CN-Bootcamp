@@ -152,8 +152,8 @@ if (fizzBuzzNum % 5 === 0 && fizzBuzzNum % 3 === 0) {
 
 //Activity 5
 
-palindromeNum = 123454321
-numString = Array.from(palindromeNum.toString()).reverse().join("");
+const palindromeNum = 123454321
+const numString = Array.from(palindromeNum.toString()).reverse().join("");
 if (palindromeNum == numString) {
   console.log(`${palindromeNum} is a palindrome`);
 } else {
@@ -179,8 +179,12 @@ console.log(`I am at work at ${placeOfWork}`);
 
 // Activity 7
 
-function isVowel(character){
- if (
+function isVowel(character, isStrictCase = false){
+  if (isStrictCase !== true){
+    character = character.toLowerCase()
+  }
+
+  if (
    character == "a" || 
    character == "e" || 
    character == "i" || 
@@ -193,9 +197,9 @@ function isVowel(character){
  }
 } 
 
-//value = "qwzzzxqbv".toLowerCase()
-//value = "bzzzzzzzzazzzzz".toLowerCase()
-value = " asdasklj djklkjkldjklwq kaldxjskdj ajjjd".toLowerCase()
+//value = "qwzzzxqbv"
+//value = "bzzzzzzzzazzzzz"
+value = " asdasklj djklkjkldjklwq kaldxjskdj Ajjjd"
 let hasVowel = false
 
 for (let i = value.length -1; i >= 0; i--){
