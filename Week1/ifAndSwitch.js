@@ -99,6 +99,7 @@ if (age >= minAge && countryIn === "UK"){
   console.log("Sorry you are not old enough to drink here");
 }
 
+
 // Activity 2
 
 const pizzaTopping = "pinapple"
@@ -135,6 +136,7 @@ if (divisibleNum % 3 === 0 || divisibleNum % 5 === 0) {
   console.log("The number is not divisible by 3 or 5");
 }
 
+
 // Activity 4
 
 let fizzBuzzNum = 15
@@ -147,6 +149,7 @@ if (fizzBuzzNum % 5 === 0 && fizzBuzzNum % 3 === 0) {
   console.log("fizz");
 }
 
+
 //Activity 5
 
 palindromeNum = 123454321
@@ -156,6 +159,7 @@ if (palindromeNum == numString) {
 } else {
   console.log(`${palindromeNum} is not palindrome`);
 }
+
 
 // Activity 6
 
@@ -172,22 +176,31 @@ if (time <= 7){
 console.log(`I am at work at ${placeOfWork}`);
 }
 
+
 // Activity 7
 
-hasVowel = false
-//value = "qwzzzxqbv"
-//value = "zzzzzzzzzazzzzz"
+function isVowel(character){
+ if (
+   character == "a" || 
+   character == "e" || 
+   character == "i" || 
+   character == "o" || 
+   character == "u"
+ ){
+   return true
+ } else {
+   return false
+ }
+} 
+
+//value = "qwzzzxqbv".toLowerCase()
+//value = "bzzzzzzzzazzzzz".toLowerCase()
 value = " asdasklj djklkjkldjklwq kaldxjskdj ajjjd".toLowerCase()
-value = Array.from(value.toString()).reverse();
-for (let i = 0; i < value.length; i++){
-  if (
-    value[i] == "a" || 
-    value[i] == "e" || 
-    value[i] == "i" || 
-    value[i] == "o" || 
-    value[i] == "u"
-  ){
-    console.log(`vowel found at position:  ${value.length - (i)}`)
+let hasVowel = false
+
+for (let i = value.length -1; i >= 0; i--){
+  if (isVowel(value.charAt(i))){
+    console.log(`vowel found at position: ${i + 1}`)
     hasVowel = true
     break;
   }
@@ -196,12 +209,15 @@ for (let i = 0; i < value.length; i++){
 // this is not necessary but for completeness
 if (hasVowel === false){
   console.log("No vowel was found");
-  
 }
 
-// Activity 8
 
-const word = "Oppo".toLowerCase()
+// Activity 8
+let word = "Oppo"
+const strictCase = false
+if(strictCase === false){
+  word = word.toLowerCase()
+}
 
 if (word.charAt(0) === word.charAt(word.length - 1)) {
   console.log(`first and last letter '${word.charAt(0)}' are the same`);
@@ -217,9 +233,6 @@ const num2 = 6
 
 if ((num1 + num2) % 2 === 0){
   console.log(`The sum: ${num1 + num2} is even`);
-  
 }else {
   console.log(`The product: ${num1 * num2}`);
 }
-
-
