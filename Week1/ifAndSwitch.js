@@ -139,14 +139,16 @@ if (divisibleNum % 3 === 0 || divisibleNum % 5 === 0) {
 
 // Activity 4
 
-let fizzBuzzNum = 15
+let fizzBuzzNum = 11;
 
 if (fizzBuzzNum % 5 === 0 && fizzBuzzNum % 3 === 0) {
   console.log("fizz buzz");
 } else if (fizzBuzzNum % 5 === 0 && fizzBuzzNum % 3 !== 0) {
   console.log("buzz");
-} else {
+} else if (fizzBuzzNum % 3 === 0 && fizzBuzzNum % 5 !== 0) {
   console.log("fizz");
+} else {
+  console.log("Neither divisible by 5 or 3");
 }
 
 
