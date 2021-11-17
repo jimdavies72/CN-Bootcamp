@@ -174,10 +174,10 @@ console.log(`I am at work at ${placeOfWork}`);
 
 // Activity 7
 
-foundVowel = false
+hasVowel = false
 //value = "qwzzzxqbv"
 //value = "zzzzzzzzzazzzzz"
-value = " asdasklj djklkjkldjklwq kaldxjskdj ajjjd"
+value = " asdasklj djklkjkldjklwq kaldxjskdj ajjjd".toLowerCase()
 value = Array.from(value.toString()).reverse();
 for (let i = 0; i < value.length; i++){
   if (
@@ -188,12 +188,13 @@ for (let i = 0; i < value.length; i++){
     value[i] == "u"
   ){
     console.log(`vowel found at position:  ${value.length - (i)}`)
-    foundVowel = true
+    hasVowel = true
     break;
   }
 }
 
-if (foundVowel === false){
+// this is not necessary but for completeness
+if (hasVowel === false){
   console.log("No vowel was found");
   
 }
@@ -218,7 +219,7 @@ if ((num1 + num2) % 2 === 0){
   console.log(`The sum: ${num1 + num2} is even`);
   
 }else {
-  console.log(`The multiplied value: ${num1 * num2}`);
+  console.log(`The product: ${num1 * num2}`);
 }
 
 
