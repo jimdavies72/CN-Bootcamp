@@ -88,7 +88,7 @@ default:
 
 // Activity 1
 
-const age = 121
+const age = 21
 const countryIn = "France"
 const minAge = 18
 

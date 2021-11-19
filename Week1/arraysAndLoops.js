@@ -30,7 +30,9 @@ let myArray = [
 console.log(myArray[0][1])
 
 
-//Activity 0
+//Activities - Arrays
+
+// Activity 1 
 
 let mySongs = [
   "Cafe Del Mar",
@@ -47,10 +49,13 @@ for (let i = 0; i < mySongs.length; i++){
   console.log(mySongs[i])
 }
 
+// Activity 2
+
 // remove 1 song at index 1 in the array
 mySongs.splice( 1, 1)
 
 console.log(mySongs);
+
 
 // Loops
 
@@ -119,7 +124,8 @@ books.forEach((book) => {
 
 */
 
-//Activities
+
+// Activities - Loops
 
 // Activity 1
 
@@ -146,6 +152,7 @@ for(let i=0; i < films.length; i++){
 }
 */
 
+
 // Activity 2
 /*
 let counter = 1
@@ -155,6 +162,7 @@ while (counter < 7){
 }
 */
 
+
 // Activity 3
 /*
 for (let i = 9; i >= 0; i--){
@@ -162,7 +170,8 @@ for (let i = 9; i >= 0; i--){
 }
 */
 
-//Activity 4
+
+// Activity 4
 /*
 const yayBooPosition = 2
 let newFilms = films.splice(0,4)
@@ -180,7 +189,8 @@ for(let i = 0; i < newFilms.length; i++){
 }
 */
 
-//Activity 5
+
+// Activity 5
 /*
 let numChances = 20
 let sevenCounter = 0
@@ -197,7 +207,7 @@ console.log(`Lucky 7's: ${sevenCounter}`)
 */
 
 
-//Activity 6
+// Activity 6
 /*
 let bobsFollowers = [
   "James",

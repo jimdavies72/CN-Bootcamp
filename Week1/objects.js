@@ -59,6 +59,7 @@ if (day === "saturday" || day === "sunday"){
 console.log(alarm)
 */
 
+
 // Activities
 
 // Activity 1 - Person object

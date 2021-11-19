@@ -1,3 +1,7 @@
+//Activies
+
+//Activity 1
+
 const gridArray = ["___|___|___", "___|___|___", "   |   |"];
 
 for (let i=0; i < gridArray.length; i++){

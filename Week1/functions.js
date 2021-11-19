@@ -112,6 +112,7 @@ let myValue = addUp(3, 7) // returns the value and stores in a variable
 console.log(addUp(7,3)) // returns and logs to the console
 */
 
+
 // Activities
 
 // Activity 1

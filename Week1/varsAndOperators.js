@@ -30,6 +30,8 @@ i += 2
 console.log(i);
 */
 
+//Activites
+
 // Activity 1
 let firstName = "james"; // camelCase
 let age = 21;
