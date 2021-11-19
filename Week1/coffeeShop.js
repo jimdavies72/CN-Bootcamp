@@ -92,6 +92,7 @@ const coffeeShop = {
   },
 };
 
+//run
 let myFoodOrder = [8, 4, 5, 9];
 console.log(coffeeShop.foodOrdered(myFoodOrder));
 let myDrinksOrder = [1, 2, 2, 7, 2];

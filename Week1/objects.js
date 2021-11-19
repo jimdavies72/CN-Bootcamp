@@ -257,8 +257,7 @@ const coffeeShop = {
     },
   ],
   processOrder(order, menuItemsArray, orderType) {
-    // loop the order
-
+    
     let typeName = "";
     if (orderType === "drinks") {
       typeName = "Drinks Order";
@@ -269,7 +268,8 @@ const coffeeShop = {
     let ticket = `
     Ticket - ${typeName}
     --------------------------`;
-    // loop the menu
+    
+    // loop the order
     for (let i = 0; i < order.length; i++) {
       const found = menuItemsArray.find((o) => o.menuItem === order[i]);
       if (typeof found !== "undefined") {

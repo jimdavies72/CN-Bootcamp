@@ -39,9 +39,11 @@ books.forEach((book) => {
 */
 
 /*
-console.log("Start");
 
 // asynchronous callback function
+
+console.log("Start");
+
 setTimeout(() => {
   console.log("Time Out");
 }, 2000);
@@ -88,7 +90,7 @@ pressGrindBeans();
 */
 
 /*
-// paramaters here--->
+// parameters here--->
 const cashWithdrawal = (amount, accNum) => {
   console.log(`Withdrawing £${amount} from account ${accNum}`)
 }
@@ -125,10 +127,8 @@ function factorial(n){
 }
 
 console.log(factorial(4))
-*/
 
 // New method
-/*
 const factorial = (n) => {
   if (n === 0 || n === 1) {
     return 1;

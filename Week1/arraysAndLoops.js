@@ -104,7 +104,7 @@ while(currentCard != "spade"){
 
 console.log(currentCard);
 
-*/
+
 
 books = [
   "War of the Worlds",
@@ -117,6 +117,7 @@ books.forEach((book) => {
   console.log(book)
 })
 
+*/
 
 //Activities
 
