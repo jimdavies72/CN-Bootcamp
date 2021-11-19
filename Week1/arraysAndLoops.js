@@ -1,6 +1,9 @@
 // Arrays
 
 /*
+
+// 1d Array
+
 const coffeeOrder = [
   "Alex - Cortado",
   "Ben - Cortado",
@@ -14,6 +17,17 @@ coffeeOrder.push("James - Tea");
 console.log(coffeeOrder);
 coffeeOrder.pop()
 console.log(coffeeOrder);
+
+
+// 2d Array
+
+let myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+console.log(myArray[0][1])
 
 
 //Activity 0

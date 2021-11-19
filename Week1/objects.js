@@ -133,6 +133,88 @@ console.log(pet.drink());
 
 // Activity 3
 
+//Version 1 - using 2d arrays to find the items...
+
+// let formatter = new Intl.NumberFormat("en-UK", {
+//   style: "currency",
+//   currency: "GBP",
+// });
+
+// const coffeeShop = {
+//   branch: "Liverpool",
+//   drinks: [
+//     [1, "tea", 2.5],
+//     [2, "coffee", 3.99],
+//     [3, "fanta", 1.5]  
+//   ],
+//   food: [
+//     [4, "beans on toast", 3],
+//     [5, "cheese panini", 3.50],
+//     [6, "warldorf salad", 8],
+//   ],
+//   drinksOrdered(order) {
+//     // loop the order
+//     let cost = 0
+//     let ticket = `
+//     Ticket - Drinks
+//     --------------------------
+//     `;
+//     for (let i = 0; i < order.length; i++){
+//       // loop the food menu
+//       for (let j = 0; j < this.drinks.length; j++){
+//         // get the items. add to list
+//         if (order[i] === this.drinks[j][0]){
+//           cost += this.drinks[j][2];
+//           ticket += 
+//           `
+//           ${this.drinks[j][1]}: ${formatter.format(this.drinks[j][2])}` + "\n" 
+//         }
+//       }
+//     }
+//     ticket +=
+//     `
+//     --------------------------
+//             Total Cost: ${formatter.format(cost)}
+//     `
+//     return ticket;
+//   },
+//   foodOrdered(order) {
+//     // loop the order
+//     let cost = 0
+//     let ticket = `
+//     Ticket - Food
+//     --------------------------
+//     `;
+//     for (let i = 0; i < order.length; i++){
+//       // loop the food menu
+//       for (let j = 0; j < this.food.length; j++){
+//         // get the items. add to list
+//         if (order[i] === this.food[j][0]){
+//           cost += this.food[j][2];
+//           ticket += 
+//           `
+//           ${this.food[j][1]}: ${formatter.format(this.food[j][2])}` + "\n" 
+//         }
+//       }
+//     }
+//     ticket +=
+//     `
+//     --------------------------
+//             Total Cost: ${formatter.format(cost)}
+//     `
+//     return ticket;
+//   }
+// };
+
+// let myFoodOrder = [6, 5]
+// let myDrinksOrder = [2,2, 1, 0]
+
+//console.log(coffeeShop.foodOrdered(myFoodOrder))
+//console.log(coffeeShop.drinksOrdered(myDrinksOrder));
+
+
+// version 2 - using array of objects...
+
 let formatter = new Intl.NumberFormat("en-UK", {
   style: "currency",
   currency: "GBP",
@@ -141,71 +223,91 @@ let formatter = new Intl.NumberFormat("en-UK", {
 const coffeeShop = {
   branch: "Liverpool",
   drinks: [
-    [1, "tea", 2.5],
-    [2, "coffee", 3.99],
-    [3, "fanta", 1.5]  
+    {
+      menuItem: 1,
+      drink: "tea",
+      price: 2.5,
+    },
+    {
+      menuItem: 2,
+      drink: "coffee",
+      price: 3.99,
+    },
+    {
+      menuItem: 3,
+      drink: "fanta",
+      price: 1.5,
+    },
   ],
   food: [
-    [4, "beans on toast", 3],
-    [5, "cheese panini", 3.50],
-    [6, "warldorf salad", 8],
+    {
+      menuItem: 4,
+      food: "beans on toast",
+      price: 3,
+    },
+    {
+      menuItem: 5,
+      food: "cheese panini",
+      price: 3.5,
+    },
+    {
+      menuItem: 6,
+      food: "warldorf salad",
+      price: 8,
+    },
   ],
-  drinksOrdered(order) {
+  processOrder(order, menuItemsArray, orderType) {
     // loop the order
-    let cost = 0
+
+    let typeName = "";
+    if (orderType === "drinks") {
+      typeName = "Drinks Order";
+    } else {
+      typeName = "Food Order";
+    }
+    let cost = 0;
     let ticket = `
-    Ticket - Drinks
-    --------------------------
-    `;
-    for (let i = 0; i < order.length; i++){
-      // loop the food menu
-      for (let j = 0; j < this.drinks.length; j++){
-        // get the items. add to list
-        if (order[i] === this.drinks[j][0]){
-          cost += this.drinks[j][2];
-          ticket += 
-          `
-          ${this.drinks[j][1]}: ${formatter.format(this.drinks[j][2])}` + "\n" 
+    Ticket - ${typeName}
+    --------------------------`;
+    // loop the menu
+    for (let i = 0; i < order.length; i++) {
+      const found = menuItemsArray.find((o) => o.menuItem === order[i]);
+      if (typeof found !== "undefined") {
+        cost += found.price;
+
+        if (orderType === "drinks") {
+          ticket +=
+            `
+          ${found.drink}: ${formatter.format(found.price)}` + "\n";
+        } else {
+          ticket +=
+            `
+          ${found.food}: ${formatter.format(found.price)}` + "\n";
         }
+      } else {
+        ticket +=
+          `
+        Something went wrong!` + "\n";
       }
     }
-    ticket +=
-    `
+    ticket += `
     --------------------------
-            Total Cost: ${formatter.format(cost)}
-    `
+             Total Cost: ${formatter.format(cost)}
+    `;
     return ticket;
   },
+
+  drinksOrdered(order) {
+    const returnValue = this.processOrder(order, this.drinks, "drinks");
+    return returnValue;
+  },
   foodOrdered(order) {
-    // loop the order
-    let cost = 0
-    let ticket = `
-    Ticket - Food
-    --------------------------
-    `;
-    for (let i = 0; i < order.length; i++){
-      // loop the food menu
-      for (let j = 0; j < this.food.length; j++){
-        // get the items. add to list
-        if (order[i] === this.food[j][0]){
-          cost += this.food[j][2];
-          ticket += 
-          `
-          ${this.food[j][1]}: ${formatter.format(this.food[j][2])}` + "\n" 
-        }
-      }
-    }
-    ticket +=
-    `
-    --------------------------
-            Total Cost: ${formatter.format(cost)}
-    `
-    return ticket;
-  }
+    const returnValue = this.processOrder(order, this.food, "food");
+    return returnValue;
+  },
 };
 
-let myFoodOrder = [6, 5]
-let myDrinksOrder = [2,2, 1, 0]
-
-console.log(coffeeShop.foodOrdered(myFoodOrder))
-//console.log(coffeeShop.drinksOrdered(myDrinksOrder));
+let myFoodOrder = [8, 4, 5, 9];
+console.log(coffeeShop.foodOrdered(myFoodOrder));
+let myDrinksOrder = [1, 2, 2, 7, 2];
+console.log(coffeeShop.drinksOrdered(myDrinksOrder));
