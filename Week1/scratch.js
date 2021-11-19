@@ -1,19 +1,14 @@
-let films = [
-  "Goodwill Hunting",
-  "Saving Private Ryan",
-  "Ghostbusters",
-  "Goodfellas"
-];
+let myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+console.log(myArray[0][1])
 
 
-for (let i = 0; i < films.length; i++) {
-  //console.log(films[i])
-  let response = "";
-  if (i === 2 && films[i] === "Ghostbusters") {
-    console.log(`Film ${i + 1}: ${films[i]} - Yeay!!!`);
-  } else if (i === 2 && films[i] !== "Ghostbusters") {
-    console.log(`Film ${i + 1}: ${films[i]} - Boo!!!`);
-  } else {
-    console.log(`Film ${i + 1}: ${films[i]}`);
-  }
-}
+
+
+num = 2.5
+console.log(formatter.format(num))
+

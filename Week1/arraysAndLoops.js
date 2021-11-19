@@ -92,6 +92,18 @@ console.log(currentCard);
 
 */
 
+books = [
+  "War of the Worlds",
+  "Animal Farm",
+  "1984",
+  "The Light Fantastic"
+]
+
+books.forEach((book) => {
+  console.log(book)
+})
+
+
 //Activities
 
 // Activity 1
@@ -136,20 +148,22 @@ for (let i = 9; i >= 0; i--){
 */
 
 //Activity 4
-
-let newFilms = films.splice(0, 4)
+/*
+const yayBooPosition = 2
+let newFilms = films.splice(0,4)
+//console.log(`new films: ${newFilms}`)
 for(let i = 0; i < newFilms.length; i++){
   //console.log(newFilms[i])
   let response = ""
-  if (i === 2 && newFilms[i] === "Ghostbusters"){
+  if (i === yayBooPosition && newFilms[i] === "Ghostbusters") {
     console.log(`Film ${i + 1}: ${newFilms[i]} - Yeay!!!`);
-  }else if (i === 2 && newFilms[i] !== "Ghostbusters") {
-    console.log(`Film ${i + 1}: ${newFilms[i]} - Boo!!!`)
-  }else {
+  } else if (i === yayBooPosition && newFilms[i] !== "Ghostbusters") {
+    console.log(`Film ${i + 1}: ${newFilms[i]} - Boo!!!`);
+  } else {
     console.log(`Film ${i + 1}: ${newFilms[i]}`);
   }
 }
-
+*/
 
 //Activity 5
 /*
@@ -177,7 +191,6 @@ let bobsFollowers = [
   "Frank"
 ]
 
-
 let hannahsFollowers = [
   "Charlotte",
   "James",
@@ -189,6 +202,9 @@ for (i = 0; i < bobsFollowers.length; i++){
   for(j = 0; j < hannahsFollowers.length; j++){
     if(bobsFollowers[i] === hannahsFollowers[j]){
       console.log(`Match: ${bobsFollowers[i]} and ${hannahsFollowers[j]}`);
+    }else {
+      // not needed, was just for testing
+      console.log(`Not a match: ${bobsFollowers[i]} and ${hannahsFollowers[j]}`);
     }
   }
 }
@@ -205,7 +221,7 @@ for (i = 0; i < bobsFollowers.length; i++){
   the benefit for do is that we can execute one circuit of the code before checking/setting the condtion: e.g.
   is it too hot? yes! then set condtion = false.
 
-*/
+
 
 // when isRunning is false the loop should display nothing
 let isRunning = false
@@ -223,3 +239,4 @@ do {
   console.log("only execute while true");
   isRunning = false;
 }while(isRunning)
+*/
