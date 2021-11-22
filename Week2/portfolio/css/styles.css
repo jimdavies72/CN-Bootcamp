@@ -1,0 +1,183 @@
+
+/*
+-------
+imports
+-------
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+/* 
+---------
+variables
+---------
+*/
+
+:root {
+  --ff-main: "Robotic", sans-serif;
+  --ff-second: "Open Sans", sass-serif;
+  --ff-logo: monospace, sans-serif;
+  --col-lt-grey: #F3F5F7;
+  --col-md-silver: #E8EBEE;
+  --col-dk-grey: #BEC2C6;
+  --col-vl-orange: #FFF3EB;
+  --col-lt-orange: #FF9147;
+  --col-dk-orange: #CC5200;
+  --col-brass: #C5906D;
+  --col-platinum: #EDEDE8;
+  --col-mahogany: #B84900;
+
+  --ls-space: 0.1rem;
+  --bs-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  --bs-inset: 10px 10px 5px -3px rgba(0,0,0,0.37) inset;
+  --transition-slow: 1s;
+  --transition-med: 0.75s;
+  --transition-fast: 0.5s;
+  --transition-vfast: 0.25s;
+
+
+}
+
+
+/* 
+--------------
+global styling
+--------------
+*/
+
+/* drawing out 
+* {
+  outline: 1px dotted red 
+}
+*/
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: var(--ff-second);
+  background: var(--col-lt-grey);
+  color: --col-ebony;
+}
+
+h1, h2 {
+  letter-spacing: var(--ls-space);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-main);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* 
+---------
+Portfolio
+---------
+*/
+
+/* Header and Nav Bar */
+nav, .main-content, footer {
+  border-radius: 5px;
+  background: var(--col-md-silver);
+  box-shadow: var(--bs-shadow);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right:50px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: black;
+  transform: rotate(-90deg);
+}
+
+.main-heading {
+ 
+  display: flex;
+  border: solid 2px black;
+  border-radius: 5px;
+  background: var(--col-dk-grey);
+  box-shadow: var(--bs-inset);
+  box-shadow: var(--bs-shadow);
+  cursor: pointer;
+  transition: var(--transition-med);
+}
+.main-heading:hover {
+  background: var(--col-mahogany);
+  color: white;
+}
+
+.logo{
+  font-family: var(--ff-logo);
+  text-transform: lowercase;
+  padding: 2px;
+}
+
+.links a {
+  color: var(--col-lt-orange);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: var(--ls-space);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition-vfast);
+}
+.links a:hover {
+  background: var(--col-brass);
+  color: var(--col-vl-orange);
+  padding-left: 1.5rem;
+}
+
+/* Content here */
+.main-content h2 {
+  font-family: var(--ff-main);
+}
+
+/* Footer here */
+footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.media-icons {
+  font-size: 2.5rem;
+  display: flex;
+  }
+  .media-icons a {
+    margin: 0 0.5rem;
+    color: black;
+    transition: var(--transition-med);
+  }
+  .media-icons a:hover {
+    color: Blue;
+  }
+
