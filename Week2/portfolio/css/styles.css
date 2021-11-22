@@ -1,0 +1,148 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+/* drawing out 
+* {
+  outline: 1px dotted red 
+}
+*/
+
+
+/* variables */
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --ff-logo: monospace, sans-serif;
+  --bc-main: #F3F6F7;
+  --bc-footer: #515252;
+}
+
+
+/* globals 
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+
+
+body {
+  font-family: var(--ff-primary);
+  background: white;
+  color: black;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  
+}
+h2 {
+  font-size: 2rem;
+}
+
+
+/* Portfolio */
+
+.header {
+  background: #DBE5E6;
+}
+
+.header,
+.image,
+.logo,
+.media-container {
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  margin: 5px;
+}
+
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bc-main);
+  background-image: linear-gradient(#989A9A, white);
+ 
+}
+
+.image {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.video {
+  display: inline-block;
+  width: 300px;
+  padding-left: 10px;
+  vertical-align: middle;
+  
+}
+
+
+.logo {
+  text-transform: lowercase;
+  letter-spacing: 5px;
+  margin: 10px;
+  padding: 2px;
+  font-family: var(--ff-logo);
+  background-color: var(--bc-main);
+  box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.37) inset;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  transition: 1s;
+}
+
+.logo:hover{
+  background-color: #989A9A;
+  color: white;
+  cursor: pointer;
+}
+
+.section{
+  background-color: var(--bc-main);
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.37) inset;
+  padding-left: 10px;
+}
+
+.section ul, ol {
+  font-weight: bold;
+  font-size: 1rem;;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  height: 3rem;
+  background-color: var(--bc-footer);
+  box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.37) inset;
+ 
+}
+
+.footler-link {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin: 20px;
+  width: 200px;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.footler-link:hover{
+  color: green;
+}
+
+

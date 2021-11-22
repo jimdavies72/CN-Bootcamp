@@ -4,13 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add this to the Head to remove the favicon.ico exception in Live Server -->
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Portfolio - James</title>
   </head>
   <body>
     <div class="main">
+      <!-- Header and Nav -->
       <div class="header">
-        <div class="nav"></div>
+        <h1 class="main-heading">
+          <span class="logo">{team::dingo}</span>
+        </h1>
+        <nav class="navbar">
+        </nav>
+      </div>
+      <!-- page video/image -->
+      <div class="media-container">
+          <img class="image" src="./img/librarian.jpg" alt="Librarian - OOK">
+        <video muted autoplay loop class="video">
+          <source src="./img/video.mp4" type="video/mp4" />
+        </video>
+     
+      </div>
+
+      <!-- 4 sections -->
+      <div class="main-sections">
+        <!-- favouriite foods -->
+        <section class="section section1">
+          <h2 class="section-header">Favourite Foods</h2>
+          <ul class="fav-foods">
+            <li>Tapas</li>
+            <li>Curries</li>
+            <li>Italian</li>
+          </ul>  
+        </section>
+        <!-- top 5 alternative bands -->
+        <section class="section section2">
+          <h2 class="section-header">Top 5 Favourite Bands from the 80s/90s</h2>
+          <ol class="fav-bands">
+            <li>The Levellers</li>
+            <li>The Dead Kennedys</li>
+            <li>The Cure</li>
+            <li>Carter USM</li>
+            <li>Nirvana</li>
+          </ol>
+        </section>
+        <!-- why I joined Code Nation -->
+        <section class="section section3">
+          <h2 class="section-header">Why I Joined Code Nation</h2>
+          <p class="code-nation">I graduated form University back in 1995 with a degree in Business Information Systems and began my IT career as an 'Applications Support Officer' for a consultancy based out of South London. Within 12 months I progressed to 'Development Consultant' after showing great interest in software and applications development. I left the consultancy and joined a telecoms company based in Berkshire as a developer where I wrote 'CTI' telephony applications for call centres using VB6 and MS SQL Server. I later became Senior Developer' within the health sector.
+          <br>
+          Whilst in this job, a 'Development Manager' position arose and I was advised by various peers that if I wanted my career to progress then I should apply for this appointment. I was reticent as at that point all I wanted to do was 'write lines'. I caved to pressure and applied and was subsequently appointed into the position. This would prove to be my greatest career regret as now, instead of writing code which I loved, I was attending meetings, writing reports, managing first line and the department - My coding hours dropped from 37.5 hours to around 2-3.
+          <br>
+          I subsequently became a Project Manager, thinking that this would draw me closer to the 'coal face', in fact it only moved me further away. within 6 or so years I had lost all my technical skills, undertaking a job that offered me very little in the way of job satisfaction. Then in 2019, I reached my limit as I became quite ill - It was this that made me decide to quit project management for good. Shortly afterwards, we all know what happened on a global...
+          <br>
+          I kicked around for the best part of 2 years not knowing what I was going to do. I had thought about going back to development however at my age, I thought what chance did I have? I did some brief project work with some friends, but mostly again as PM with little dev involved. Then in August 2021, as if the fates poked me with a stick, I was playing a mobile phone game when an advert appeared offering courses in 'software development', so I thought 'you know what, Im going to apply for this, what is the worst that can happen?'. The rest is as they say history, here I am, back amongst the code where I belong.
+          </p>
+        </section>
+        <!-- Course Targets -->
+        <section class="section section4">
+          <h2 class="section-header">Course Targets</h2>
+          <ol>
+            <li>Gain as much technical knowledge as possible</li>
+            <p>I need to soak up as much information as possible form the course so that I can have confidence in my own personal abilities.</p>
+            <li>Complete the course as best as I can </li>
+            <p>I am lead to understand that the course is extremely intensive and by looking at the technology list, I feel there will be times when I will struggle to perhaps keep up witht the group. That said, I will work hard, put in the long hours and make sure that I cross the line</p>
+            <li>Learn to promote myself with confidence</li>
+            <p>Though I have great confidence in my own personal abilities, I appreciate that I am not necessarily the best at articulating these. I need to learn, understand and execute the ability to effectively market myself</p>
+            <li>Find an appointment within a company where I can grow </li>
+            <p>Taking the new skills I have learned, apply these within a dynamic organisation where I can grow, flourish and provide ever increasing benefit to my new company!</p>
+            <li>Get my self esteem back</li>
+            <p>get to back to a point where I feel an worth something again.</p>
+          </ol>
+      </section>
+        <!-- Footer -->
+        <footer class="footer">
+          <a class="footler-link link1" href="https://www.terrypratchettbooks.com/" target="_blank">Terry Pratchett Books</a>
+          <a class="footler-link link2" href="https://www.virgingalactic.com/" target="_blank">Virgin Galactic</a>
+        </footer>
       </div>
     </div>
+    <scripts src="./src/main.js"></script>
   </body>
 </html>
