@@ -1,0 +1,46 @@
+
+/* import fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+/* drawing out 
+* {
+  outline: 1px dotted red 
+}
+*/
+
+
+/* variables */
+:root {
+  --ff-primary: "Roboto", sans-serif;
+}
+
+
+/* globals
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+
+body {
+  font-family: var(--ff-primary);
+  background: white;
+  color: black;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+
+/* Project */
+
