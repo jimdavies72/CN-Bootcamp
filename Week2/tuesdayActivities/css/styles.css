@@ -1,0 +1,27 @@
+
+
+/* 
+#heading{
+  background-color: blue;
+}
+
+.largeText {
+  font-size: 40px;
+}
+
+.green{
+  color: green;
+} */
+
+
+/* increase and decrease the width of your browser */
+
+body{
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
