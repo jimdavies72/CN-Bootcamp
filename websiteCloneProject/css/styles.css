@@ -1,0 +1,278 @@
+
+
+/*
+------- 
+imports 
+-------
+*/
+
+/* 
+google fonts 
+Roboto --> Helvetica Neue
+Poppins --> Sofia-Pro
+Helvetica
+Arial
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* variables */
+:root{
+--ff-primary: "Poppins", " Roboto", Helvetica, Arial;
+--nav-font-size: 16px;
+--spacing: 0.25rem;
+--col-btn-blue: rgb(66, 83, 231);
+--col-btn-blue2: rgb(38, 36, 206);
+--transition-slow: 1s;
+--transition-med: 0.75s;
+--transition-fast: 0.5s;
+--transition-vfast: 0.25s;
+
+--max-width: 1170px;
+--fixed-width: 620px;
+}
+
+
+/* globals */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, 
+::before, 
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+}
+
+body{
+  font-family: var(--ff-primary);
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+
+.fas{
+  font-size: var(--nav-font-size);
+}
+
+
+h2{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+
+.quote{
+  font-size: 16px;
+  font-weight: lighter;
+  letter-spacing: 0.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 2rem;
+}
+
+.quoter{
+  text-align: right;
+  font-size: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+
+/* Web site clone */
+
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+}
+
+.btn-img{
+  aspect-ratio: 16/9;
+  width: 200px;
+}
+
+.links-container ul{
+  height: auto;
+  display: flex;
+  font-size: var(--nav-font-size);
+}
+
+.links a{
+  color: black;
+  padding: 10px;
+  transition: var(--transition-vfast);
+
+}
+
+.links a:hover{
+  color: var(--col-btn-blue);
+}
+
+.btn-lozenge {
+  background-color: var(--col-btn-blue);
+  min-height: 40%;
+  max-height: auto;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 4px 2px;
+  display: inline-block;
+  border-radius: 16px;
+  transition: var(--transition-vfast);
+}
+
+.btn-lozenge:hover{
+  cursor: pointer;
+  background-color: var(--col-btn-blue2);
+}
+
+.sub-heading{
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.section{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* align-content: center; */
+  padding-bottom: 4rem;
+}
+
+.narrow-section{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section div{
+  flex: 1;
+  flex-basis: 50%;
+
+}
+
+.full-banner{
+  background-color: violet;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:space-between;
+  align-items: center;
+  position: relative;
+  
+}
+
+.full-banner div{
+  display: flex;
+  width: 50%;
+  background-color: yellow;
+  flex: 1;
+  position: absolute;
+}
+
+
+#banner{
+  width: 100%;
+  height: 630px;
+}
+
+.card-vid{
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+}
+
+
+/* 
+---------------------
+Sign Up Modal Overlay
+---------------------
+*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-items: center;
+  transition: var(--transition-med);
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.modal-container {
+  background: black;
+  color: white;
+  border-radius: 2px;
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition-med);
+}
+.close-modal-btn:hover {
+  color: red;
+  transform: scale(1.3);
+}
+
+
+/* 
+-------------
+Media Queries
+-------------
+*/

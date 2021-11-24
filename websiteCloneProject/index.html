@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Font Awesome link -->
+  <script src="https://kit.fontawesome.com/5fae0c55f6.js" crossorigin="anonymous"></script>
+  <title>Virgin Galactic</title>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header / nav -->
+    <header class="header">
+      <!-- burger menu for media query -->
+      <!-- <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button> -->
+      
+      <!-- <i class="fas fa-times"></i> -->
+      <!-- logo -->
+      <img class="btn-img" src="./media/virginGalacticLogoSmall.png" alt="Virgin Galatic Logo"> 
+      <!-- links -->
+      <nav class="links-container">
+        <ul class="links">
+          <li class="nav-item">
+            <a href="#why-we-go" class="scroll-link">Why We Go</a>
+          </li> 
+          <li class="nav-item">
+            <a href="#become-an-astronaut" class="scroll-link">become an astronaut</a>
+          </li>
+          <li class="nav-item">
+            <a href="#the-experience" class="scroll-link">the experience</a>
+          </li> 
+          <li class="nav-item">
+            <a href="#spaceport-america" class="scroll-link">spaceport america</a>
+          </li> 
+          <li class="nav-item">
+            <a href="#research" class="scroll-link">research<i class="fas fa-external-link-alt"></i></a>
+          </li> 
+          <li class="nav-item">
+            <a href="#news" class="scroll-link">news<i class="fas fa-external-link-alt"></i></a>
+          </li> 
+        </ul>
+      </nav>  
+      <button class="btn btn-signup btn-lozenge">SIGN UP ></button>
+    </header>
+
+    <!-- content sections -->
+    <main class="content-wrapper">
+    <!-- home / banner -->
+      <section id="home" class="section">
+        <div>
+          <iframe id="banner" src="https://www.youtube.com/embed/ZPrB3WvnZpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      <!-- Why we go -->
+      <div class="sub-heading"><h2>why we go</h2></div>
+      <section id="why-we-go" class="section narrow-section">
+        <div class="quote">
+          <h3>"I really hope that there will be millions of kids all over the world who will be captivated and inspired about the possibility of them going to space one day."</h3>
+          <p class="quoter">– Richard Branson, Founder, Virgin Galactic</p>
+
+        </div>
+        <div>
+          <iframe class="card-vid" src="https://www.youtube.com/embed/33sW139A164" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+      </section>
+      <!-- Become an astronaught -->
+      <section id="become-an-astronaut" class="section">
+        <div class="banner full-banner">
+          <div>
+            <img src="./media/hero-BecomeAnAstronaut.jpg" alt="become an astronaught banner">
+          </div>
+          <div class="sub-heading">
+            <h2>Become an astronaught</h2>
+          </div>
+          <div>
+            <p>This year, we’ll be making a limited number of tickets available for future spaceflights. Take the leap with us as we get one step closer to filling the world with astronauts.</p>
+          </div>
+          <div>
+            <button class="btn btn-lozenge">fly with us ></button>
+          </div>  
+        </div>
+      </section>
+      <div class="modal-overlay">
+        <div class="modal-container">
+          <div>
+            <!-- <img src="./media/signupModalImage.jpg" alt=""> -->
+          </div>
+          <button class="close-modal-btn">
+            <i class="fas fa-times"></i>
+          </button>
+          <form>
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname"><br>
+            <label for="lastname">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="checkboxes">I’m interested in: (Check all that apply)</label><br>
+            <input type="checkbox" id="vg-updates" name="vg-updates" unchecked>
+            <label for="vg-updates">Virgin Galactic updates.</label><br>
+            <input type="checkbox" id="future-ticket-sales" name="future-ticket-sales" unchecked>
+            <label for="future-ticket-sales">Future ticket sales.</label><br>
+            <input type="checkbox" id="research" name="research" unchecked>
+            <label for="vg-updates">Conducting a research experiment in space.</label><br>
+            <input type="checkbox" id="consent" name="consent" unchecked>
+            <label for="consent">By ticking this box you consent to Virgin Galactic sending you communications & information about our programme, sending invites to Virgin Galactic events and contacting you with ticket sales information. We need you to tick this box to confirm that you are happy to receive these communications from us otherwise we will not be able to provide you with updates about our events or programme. However, even if you choose not to tick this box we will still email you regarding future ticket sales information. You can withdraw your consent at any time as set out in our Privacy Notice. We will store and use the data you have provided above as set out in our Privacy Notice.</label><br> 
+          </form>
+          <p>You can always tell us you no longer want to receive Mission Updates or hear about reservations by sending an email to Updates@virgingalactic.com.</p>
+          We will store and use the data you have provided above as set out in our Privacy Notice.
+          <br><br>
+          <button class="btn btn-signup btn-lozenge">Submit</button>
+        </div>
+      </div>
+    </main>
+    
+    <!-- end of wrapper  -->
+  </div>
+
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
