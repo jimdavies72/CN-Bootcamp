@@ -36,12 +36,12 @@ div a{
   box-shadow: 40px -17px 24px 4px rgba(235,56,56,0.69);
   transition: 2s;
 }
-
+/* 
 .cn-logo:hover{
   transform: rotate(360deg);
   background-color: green;
   color:white;
-}
+} */
 
 .facebook{
   position: fixed;
@@ -106,6 +106,12 @@ div a{
 }
 
  /* animation: move 5s 2; */
+
+
+.color-one{
+  background-color: thistle;
+}
+
 
 
 @keyframes fb-move {
