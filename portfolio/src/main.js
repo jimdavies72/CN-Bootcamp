@@ -3,6 +3,9 @@
 const dateEl = document.getElementById("date")
 dateEl.innerHTML = new Date().getFullYear()
 
+// accordian quesitons
+const questions = document.querySelectorAll(".question");
+
 
 // toggle links
 const navToggle = document.querySelector(".nav-toggle");
@@ -51,7 +54,7 @@ scrollLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     //removes the default event action
     event.preventDefault()
-    //navigate to sepcific spot
+    //navigate to specific spot
 
     //get the element attribute but at position 1 in the string (ignoring the starting # of the href in this case -> #about becomes about)
     const id = event.currentTarget.getAttribute("href").slice(1)
@@ -77,5 +80,22 @@ scrollLinks.forEach((link) => {
       top: position
     })
     linksContainer.style.height = 0
+  })
+})
+
+
+// About me accordian 
+
+questions.forEach((question) => {
+  const btn = question.querySelector(".question-btn")
+  //console.log(btn)
+  
+  btn.addEventListener("click", () => {
+    questions.forEach((item) => {
+      if (item !== question){
+        item.classList.remove("show-text")
+      }
+    })
+    question.classList.toggle("show-text");
   })
 })
