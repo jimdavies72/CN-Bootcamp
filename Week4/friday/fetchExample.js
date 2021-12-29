@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const getPeople = async () => {
   try {
-    const records = 2;
+    const records = 10;
     // url to random person generator website
     const url = "https://randomuser.me/api/?results=" + records;
     //console.log(url)
@@ -21,7 +21,7 @@ getPeople().then(data => {
   //console.log(people)
 
   for(let i = 0; i < people.length; i++){
-    let person = `${people[i].name.title} ${people[i].name.first} ${people[i].name.last}`;
+    let person = `${people[i].name.title} ${people[i].name.first} ${people[i].name.last} - ${people[i].location.city} - Age: ${people[i].dob.age}`;
   
     console.log(person)
   }
