@@ -3,13 +3,16 @@
 
 const fs = require("fs");
 const inquirer = require("inquirer");
-
 const { userChoices, movieQuestions } = require("./utils/questionArrays.js");
 const { addMovie } = require("./utils/index");
 
-const app = async () => {
-  let movieArray;
+const app = async (clearConsole = true) => {
+  if (clearConsole) {
+    console.clear();
+  }
 
+  console.log("\n");
+  let movieArray;
   let response = await inquirer.prompt(userChoices);
   if (response.addQuitOrReview === "Add") {
     try {
@@ -23,27 +26,23 @@ const app = async () => {
 
     addMovie(movieArray, { title: response.movieName, actor: response.actor });
 
-    displayMovies();
-
-    // if (process.argv[2] === "title" && process.argv[4] === "actor") {
-    //   addMovie(movieArray, { title: process.argv[3], actor: process.argv[5] });
-    //   //console.log("add movie done");
-    // } else {
-    //   //console.log("I dont understand");
-    // }
+    app(true);
   } else if (response.addQuitOrReview === "Review") {
+    displayMovies();
+    app(false);
+  } else {
     displayMovies();
   }
 };
 
 const displayMovies = () => {
+  console.clear();
   console.log(`
-    Stored Movies...
-    _________________
-    
+  Stored Movies...
+  ________________
     `);
   console.log(getMovies());
+  console.log("\n");
 };
 
 app();
-//console.log(process.argv);
