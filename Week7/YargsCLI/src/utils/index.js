@@ -38,9 +38,7 @@ const listSingleMovie = (title) => {
 const updateMovie = (cliArguments) => {
   try {
     const movieArr = JSON.parse(fs.readFileSync(filePath));
-    const movieObj = movieArr.find(
-      (movieArr) => movieArr.title === cliArguments.search
-    );
+    const movieObj = movieArr.find((obj) => obj.title === cliArguments.search);
 
     cliArguments.title && (movieObj.title = cliArguments.title);
     cliArguments.actor && (movieObj.actor = cliArguments.actor);
