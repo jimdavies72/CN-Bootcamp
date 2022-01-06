@@ -27,7 +27,8 @@ const app = () => {
       } else if (process.argv[2] === "list") {
         listMovies();
       } else if (process.argv[2] === "update") {
-        updateMovie(yargs.argv.title, yargs.argv.actor);
+        // node src/app.js "update" --search="alient" --title="aliens"
+        updateMovie(yargs.argv);
       } else if (process.argv[2] === "delete") {
         deleteMovie(yargs.argv.title);
       } else if (process.argv[2] === "single") {
