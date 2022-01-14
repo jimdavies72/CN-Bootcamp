@@ -1,0 +1,45 @@
+// Table Card {
+//   id int [pk, increment]
+//   name varchar
+//   cost int
+//   description varchar
+//   power int
+//   toughness int
+//   deck int [ref: > Deck.id]
+
+// }
+
+// Table Deck {
+//   id int [pk, increment]
+//   name varchar
+// }
+
+Table Customer {
+  id int [pk, increment]
+  name varchar
+  address int [ref: > Address.id]
+} 
+
+Table Address {
+  id int [pk, increment]
+  house_number varchar
+  address1 varchar
+  address2 varchar
+  address3 varchar
+  country int [ref: > Countries.id]
+  postcode varchar
+}
+
+
+Table Countries {
+  id int [pk, increment]
+  name varchar
+  code varchar
+}
+
+Enum Countries {
+   England
+   Scotland
+   Wales
+   NI
+}
