@@ -28,6 +28,8 @@ WHERE employee_id = 1;
 -- Extension
 
 -- recreate the table with a 3 cols
+
+-- Method 1 drop the table and recreate the table....
 CREATE TABLE master32.great_names (
 employee_id INT PRIMARY KEY,
 name VARCHAR(60),
@@ -42,6 +44,16 @@ VALUES
 	(3, 'Peter', 'Y'),
 	(4, 'Joe', 'Y'),
 	(5, 'Neil', 'Y');
+
+-- Method 2 - run an alter on the existing table to add the new column
+ALTER TABLE master32.great_names
+ADD great_name_ind CHAR(1)
+AFTER name;
+
+-- update the new column with data
+UPDATE master32.great_names
+SET great_name_ind = 'Y'
+
 
 -- Change one of the rows
 UPDATE master32.great_names
